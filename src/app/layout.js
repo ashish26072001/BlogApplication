@@ -4,6 +4,7 @@ import Footer from "@/components/footer/Footer";
 import Navbar from "@/components/navbar/Navbar";
 import { ThemeProvider } from "@/context/ThemeContext";
 import AuthProvider from "@/components/AuthProvider/AuthProvider";
+import { Suspense } from 'react'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,6 +17,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
+        <Suspense>
         <ThemeProvider>
           <AuthProvider>
         <div className="container">
@@ -25,6 +27,7 @@ export default function RootLayout({ children }) {
         </div>
         </AuthProvider>
         </ThemeProvider>
+        </Suspense>
         </body>
     </html>
   );
