@@ -114,7 +114,7 @@ const Dashboard = () => {
           <h1>Add New Post</h1>
           <input type="text" placeholder="Title" className={styles.input}  required/>
           <input type="text" placeholder="Desc" className={styles.input} required />
-          <input type="text" placeholder="Image" className={styles.input}  required/>
+          <input type="text" placeholder="Image URL" className={styles.input}  required/>
           <textarea
             placeholder="Content"
             className={styles.textArea}
