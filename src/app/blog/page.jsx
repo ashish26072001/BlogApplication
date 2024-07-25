@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { notFound } from 'next/navigation';
 
 async function getData(id) {
-  const res = await fetch("http://localhost:3000/api/posts", {
+  const res = await fetch("/api/posts", {
     cache: "no-store",
   });
 
@@ -24,7 +24,7 @@ const Blog = async() => {
    
       {
         data.map((item)=>(
-          <Link rel="preload" as="font"  href={`/blog/${item._id}`}  className={styles.container}  key={item._id}>
+          <Link href={`/blog/${item._id}`}  className={styles.container}  key={item._id}>
         <div className={styles.imageContainer}>
           <Image
             src={item.img}
