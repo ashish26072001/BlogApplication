@@ -4,8 +4,8 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { notFound } from 'next/navigation';
 
-async function getData(id) {
-  const res = await fetch("/api/posts", {
+async function getData() {
+  const res = await fetch("process.env.API_URL/api/posts", {
     cache: "no-store",
   });
 
